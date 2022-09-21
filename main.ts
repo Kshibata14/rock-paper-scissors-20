@@ -5,8 +5,8 @@ radio.onReceivedNumber(function (receivedNumber) {
             radio.sendString("L")
             Score += 1
         } else if (My_hand == Rock_Index) {
-            basic.showString("T")
-            radio.sendString("T")
+            basic.showString("Tie")
+            radio.sendString("Tie")
         } else {
             basic.showString("L")
             radio.sendString("W")
@@ -94,11 +94,11 @@ Paper_Index = 2
 Rock_Index = 3
 let Score = 0
 Paper_Image = images.createImage(`
-    # # # # #
-    # # # # #
-    # # # # #
-    # # # # #
-    # # # # #
+    . . . . .
+    . # # # .
+    . # # # .
+    . # # # .
+    . . . . .
     `)
 Rock_Image = images.createImage(`
     . . . . .
@@ -117,8 +117,8 @@ Scissor_Image = images.createImage(`
 basic.forever(function () {
     if (Score >= 2) {
         music.startMelody(music.builtInMelody(Melodies.BaDing), MelodyOptions.Once)
-        basic.showString("You Win")
-        radio.sendString("You Lose")
+        basic.showString("Winner")
+        radio.sendString("Loser")
         basic.clearScreen()
     }
 })

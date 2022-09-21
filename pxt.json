@@ -1,5 +1,5 @@
 {
-    "name": "Rock Paper Scissors 2.0",
+    "name": "RPS",
     "description": "",
     "dependencies": {
         "core": "*",
